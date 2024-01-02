@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <title>Lab 2 Form</title>
+    <style>
+      body {
+        background-color: #ffcb8b;
+      }
+
+      label {
+        font-size: 16px;
+        text-align: right;
+      }
+
+      div {
+        margin-bottom: 14px;
+      }
+
+      .submit {
+        background-color:black;
+        color: white;
+        margin-top: 10px;
+        font-size: 14px;
+        transition: background-color 0.15s;
+      }
+
+      .submit:hover {
+        background-color: rgb(102, 100, 100);
+      }
+
+      .nameBox {
+        font-size: 16px;
+        padding-left: 4px;
+        padding-right: 8px;
+      }
+
+      .emailBox {
+        font-size: 16px;
+        padding-left: 4px;
+        padding-right: 8px;
+        
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>INST 377 - Lab 2 - Contact Me</h1>
+    <form name="htmlExampleForm" method="post" action="/Users/kadenharvey/inst377-lab-2-kharvey01/Lab2_success.html">
+      <div>
+        <label for="name">Name:</label>
+        <input class="nameBox" type="text" id="name" required>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input class="emailBox" type="email" id="email" required>
+       </div>
+      <input class="submit" type="submit" value="Submit">
+   <form>
+  </body>
+</html>
