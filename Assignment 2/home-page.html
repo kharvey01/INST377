@@ -1,0 +1,130 @@
+<html>
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" href="general.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    <script type="text/javascript" src="home.js"></script>
+    <style>
+      body {
+        background-color: #7EB2DD;
+      }
+      #page-buttons {
+        display: flex;
+        justify-content: center;
+        padding-left: 32px;
+        margin-bottom: 20px;
+      }
+      #page-buttons button {
+        margin-right: 30px;
+        align-items: center;
+        background-color: #FFE8D4;
+        border: 2px solid #111;
+        border-radius: 8px;
+        box-sizing: border-box;
+        color: #111;
+        cursor: pointer;
+        display: flex;
+        font-size: 22px;
+        height: 80px;
+        justify-content: center;
+        line-height: 24px;
+        width: 180px;
+        padding: 0 25px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+      }
+      .pageButton:after {
+        background-color: #111;
+        border-radius: 8px;
+        content: "";
+        display: block;
+        height: 80px;
+        left: -2;
+        width: 180px;
+        position: absolute;
+        top: -2px;
+        transform: translate(8px, 8px);
+        transition: transform .2s ease-out;
+        z-index: -1;
+      }
+      .pageButton:hover:after {
+        transform: translate(0, 0);
+      }
+      .pageButton:active {
+        background-color: #ffdeda;
+        outline: 0;
+      }
+      .pageButton:hover {
+        outline: 0;
+      }
+      #quoteBox {
+        text-align: center;
+        width: 700px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+        border-color: black;
+        border-width: 2px;
+        border-style: solid;
+        margin: auto;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+      }
+      #quoteBox p {
+        width: 500px;
+        color:rgb(97, 98, 98);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>INST377 - Activities</h1>
+    <!-- Navigation Bar-->
+    <nav id="main-nav">
+      <ul>
+        <li onclick="window.location.href = 'home-page.html';">Home</li>
+        <li onclick="window.location.href = 'stocks-page.html';">Stocks</li>
+        <li onclick="window.location.href = 'dogs-page.html';">Dogs</li>
+      </ul>
+    </nav>
+    <h2>These are some different acitivities we can try!</h2>
+    <!-- Buttons Div -->
+    <div id="page-buttons">
+      <button class="pageButton" onclick="window.location.href = 'stocks-page.html';">Stocks</button>
+      <button class="pageButton" onclick="window.location.href = 'dogs-page.html';">Dogs</button>
+    </div>
+    <!-- Quote Div-->
+    <div id="quoteBox">
+      <h3>Quote of the Page Load</h3>
+      <p><q id="quote"></q>&mdash;</p>
+      <p id="author"></p>
+    </div>
+    <!-- Audio Div -->
+    <div id="audio-div">
+      <h2>In this web page there are options to Navigate using Audio!</h2>
+      <p>Ensure your mic is enabled to be able to use this feature</p>
+      <ul>
+        <li>Navigate to a Different Page</li>
+        <ul>
+          <li>Say: <b>Navigate to &ltpage&gt</b></li>
+        </ul>
+        <li>Change the Page Color</li>
+        <ul>
+          <li>Say: <b>Change the color to &ltcolor&gt</b></li>
+        </ul>
+        <li>Say Hello Back to you!</li>
+        <ul>
+          <li>Say: <b>Hello</b></li>
+        </ul>
+      </ul>
+      <div id="audio-buttons">
+        <button onclick="start()" class="audio1">Turn On Listening</button>
+        <button onclick="stop()" class="audio2">Turn Off Listening</button>
+      </div>
+    </div>
+  </body>
+</html>

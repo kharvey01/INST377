@@ -1,0 +1,111 @@
+<html>
+  <head>
+    <title>Dogs</title>
+    <link rel="stylesheet" href="general.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
+    <script type="text/javascript" src="dogs.js"></script>
+    <style>
+      #dogImages {
+        margin: auto;
+        align-items: center;
+        position: relative;
+        width: 1300px;
+        height: 520px;
+        margin-bottom: 30px;
+      }
+      #breedButtons {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        gap: 4px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 1400px;
+      }
+      .breed {
+        background-color: #FFE8D4;
+        background-image: none;
+        border: 1px solid #000;
+        border-radius: 4px;
+        box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+        box-sizing: border-box;
+        color: black;
+        cursor: pointer;
+        font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        margin: 0 5px 10px 0;
+        overflow: visible;
+        padding: 12px 20px;
+        text-align: center;
+        text-transform: none;
+        touch-action: manipulation;
+        user-select: none;
+        -webkit-user-select: none;
+        vertical-align: middle;
+        white-space: nowrap;
+      }
+      .breed:hover {
+        text-decoration: none;
+      }
+      .breed:active {
+        box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+        outline: 0;
+      }
+      .breed:not([disabled]):active {
+        box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+        transform: translate(2px, 2px);
+      }
+      #info {
+        margin: auto;
+        border: 6px solid black;
+        width: 96%;
+        padding-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>INST377 - Dogs</h1>
+    <!-- Navigation Bar-->
+    <nav id="main-nav">
+      <ul>
+        <li onclick="window.location.href = 'home-page.html';">Home</li>
+        <li onclick="window.location.href = 'stocks-page.html';">Stocks</li>
+        <li onclick="window.location.href = 'dogs-page.html';">Dogs</li>
+      </ul>
+    </nav>
+    <h2>Dog Breeds</h2>
+    <div id="dogImages" data-simple-slider></div>
+    <div id="breedButtons"></div>
+    <div id="descriptionBox"></div>
+     <!-- Audio Div -->
+     <div id="audio-div">
+      <h2>In this web page there are options to Navigate using Audio!</h2>
+      <p>Ensure your mic is enabled to be able to use this feature</p>
+      <ul>
+        <li>Load Dog Breed</li>
+        <ul>
+          <li>Say: <b>Load Dog Breed &ltDog Breed Name&gt</b></li>
+        </ul>
+        <li>Navigate to a Different Page</li>
+        <ul>
+          <li>Say: <b>Navigate to &ltpage&gt</b></li>
+        </ul>
+        <li>Change the Page Color</li>
+        <ul>
+          <li>Say: <b>Change the color to &ltcolor&gt</b></li>
+        </ul>
+        <li>Say Hello Back to you!</li>
+        <ul>
+          <li>Say: <b>Hello</b></li>
+        </ul>
+      </ul>
+      <div id="audio-buttons">
+        <button onclick="start()" class="audio1">Turn On Listening</button>
+        <button onclick="stop()" class="audio2">Turn Off Listening</button>
+      </div>
+    </div>
+  </body>
+</html>
