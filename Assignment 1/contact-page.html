@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="general.css">
+    <!-- Validates user input-->
+    <script type="text/javascript">
+      function validate() {
+        var specialChar = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+        if((document.contactForm.concern.value == "") || 
+          (document.contactForm.concern.value == " ")) {
+          alert("You have to put a concern");
+          return false;
+        } else if(specialChar.test(document.contactForm.concern.value) ||
+            specialChar.test(document.contactForm.name.value)) {
+          alert("You have put an invalid character in input");
+          return false;
+        }
+        return true;
+      }
+    </script>
+    <style>
+      label {
+        width: 60px;
+        display: inline-block;
+        text-align: right;
+      }
+      .concerns {
+        display: flex;
+        align-items: first baseline;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Bar -->
+    <header id="head">
+      <h1>Contact Me!</h1>
+    </header>
+    <!-- Navigation Bar -->
+    <nav id="main-nav">
+      <ul>
+        <li onclick="window.location.href = 'home-page.html';">Home</li>
+        <li onclick="window.location.href = 'game-page.html';">Games</li>
+        <li onclick="window.location.href = 'contact-page.html';">Contact Us</li>
+      </ul>
+    </nav>
+    <h1>Have Questions? Feel free to reach out!</h1>
+    <!-- Form -->
+    <form name="contactForm" onsubmit="return(validate())" action="form-success.html">
+      <div>
+        <label for="name">Name:</label>
+        <input class="nameBox" type="text" id="name" required>
+      </div>
+      <br>
+      <div>
+        <label for="date">Date:</label>
+        <input class="dateBox" type="date" id="date" required>
+      </div>
+      <br>
+      <div class="concerns">
+        <label for="concernBox">Concern:</label>
+        <textarea rows="5" cols="30" id="concern"></textarea>
+      </div>
+      <br>
+      <input type="submit">
+    </form>
+      <footer id="foot">
+        <p1>Copyright of someone, somewhere</p1>
+      </footer>
+  </body>
+</html>

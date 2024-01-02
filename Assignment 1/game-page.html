@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <title>Games</title>
+    <script type="text/javascript" src="game-js.js"></script>
+    <link rel="stylesheet" href="general.css">
+    <style>
+      .selection {
+        margin-bottom: 50px;
+      }
+      .choices {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+      }
+      .choices div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #55BCC9;
+        border-color: black;
+        border-width: 1.5px;
+        border-style: solid;
+        padding-top: 12px;
+        padding-bottom: 8px;
+        width: 100%;
+        height: 90px;
+        text-align: center;
+      }
+      .user-choice {
+        margin-right: 10px;
+      }
+      .computer-choice {
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Bar -->
+    <header id="head">
+      <h1>Games</h1>
+    </header>
+    <!-- Navigation Bar -->
+    <nav id="main-nav">
+      <ul>
+        <li onclick="window.location.href = 'home-page.html';">Home</li>
+        <li onclick="window.location.href = 'game-page.html';">Games</li>
+        <li onclick="window.location.href = 'contact-page.html';">Contact Us</li>
+      </ul>
+    </nav>
+    <!-- Game -->
+    <h2>Rock, Paper, Scissors</h2>
+    <hr>
+    <div class="selection">
+      <form name="game" onsubmit="userChoice() & computerHand() & computerChoice() & 
+        gameResult(); return false;">
+        <select id="hand">
+         <option value="rock">Rock</option>
+          <option value="paper">Paper</option>
+          <option value="scissors">Scissors</option>
+        </select>
+      <input type="submit">
+    </form>
+    </div>
+    <hr>
+    <div class="choices">
+      <div class="user-choice">
+        <h3>You Chose:</h3>
+        <h3 id="user"></h3>
+      </div>
+      <div class="computer-choice">
+        <h3>Computer Chose:</h3>
+        <h3 id="computer"></h3>
+      </div>
+    </div>
+    <footer id="foot">
+      <p1>Copyright of someone, somewhere</p1>
+  </footer>
+  </body>
+</html>

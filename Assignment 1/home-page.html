@@ -1,0 +1,101 @@
+<html>
+  <head>
+    <title>INST377 Class Page</title>
+    <link rel="stylesheet" href="general.css">
+    <style>
+      .main-container {
+        background-color: #55BCC9;
+        width: 100%;
+        height: 80%;
+      }
+      .content-box {
+        background-color: #CAFAFE;
+        padding: 10px;
+        margin: 10px;
+      }
+      .link-image {
+        position: relative;
+        float: right;
+        bottom: 50px;
+        width: 50px;
+        transition: 0.15s;
+      }
+      .link-image:hover {
+        box-shadow: 4px 2px 5px black;
+      }
+      .announcement-box {
+        width: 70%;
+        float: left;
+        background-color: #55BCC9;
+        border-style: solid;
+        border-width: 1px;
+      }
+      #sidebar {
+        background-color: #FC4445;
+        text-align: center;
+        width: 25%;
+        margin: 10px;
+        padding: 10px;
+        float: right;
+        border-style: solid;
+        border-width: 1px;
+      }
+      .reach:hover {
+        background-color: #55BCC9;
+        color: white;
+        transition-duration: .15s;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Bar -->
+    <header id="head">
+      <h1>INST377  - Class Page</h1>
+    </header>
+    <!-- Navigation Bar -->
+    <nav id="main-nav">
+      <ul>
+        <li onclick="window.location.href = 'home-page.html';">Home</li>
+        <li onclick="window.location.href = 'game-page.html';">Games</li>
+        <li onclick="window.location.href = 'contact-page.html';">Contact Us</li>
+      </ul>
+    </nav>
+    <!-- Main Text Area -->
+    <div class="main-container">
+      <h1>Announcements</h1>
+      <div class="announcement-box">
+        <div class="content-box">
+          <h1>LinkedIn</h1>
+          <p>Link to my LinkedIn</p>
+          <img class="link-image" 
+          src="https://static.wixstatic.com/media/d0f474_6197934499d44093b4a5b476ea821260~mv2.png/v1/fill/w_560,h_560,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/3.png"
+          onclick="window.open('https://www.linkedin.com/in/kaden-harvey-767ba8163')">
+        </div>
+        <div class="content-box">
+          <h1>YouTube</h1>
+          <p>Link to Youtube</p>
+          <img class="link-image" 
+          src="https://cdn3.iconfinder.com/data/icons/social-network-30/512/social-06-512.png"
+          onclick="window.open('https://www.youtube.com/')">
+        </div>
+        <div class="content-box">
+          <h1>VICE</h1>
+          <p>Link to VICE</p>
+          <img class="link-image" 
+          src="https://vice-web-statics-cdn.vice.com/images/vice-og.png"
+          onclick="window.open('https://www.vice.com/en')">
+        </div>
+      </div>
+      <aside id="sidebar">
+        <h1>Contact Info</h1>
+        <hr>
+        <h3>Name: Kaden Harvey</h3>
+        <h3>Email: kharvey4@umd.edu</h3>
+        <button class="reach" onclick="window.location.href = 'contact-page.html';">Reach out!</button>
+      </aside>
+    </div>
+    <footer id="foot">
+        <p1>Copyright of someone, somewhere</p1>
+    </footer>
+  </body>
+</html>
