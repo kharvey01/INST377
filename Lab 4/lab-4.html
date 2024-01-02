@@ -1,0 +1,46 @@
+<hmtl>
+  <head>
+    <title>Lab 4</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lab 4</h1>
+    <p><b>GET Data Form</b></p>
+    <h3>Please select a product you would like to recieve information for</h3>
+    <form method ="GET" action="https://inst377-lab4-server.vercel.app/api/product">
+      <label for="name">Name:</label>
+      <input type="text" name="name">
+      <br>
+      <label for="productId">Product:</label>
+      <select name="productId">
+        <option value="1">Phone</option>
+        <option value="2">Light</option>
+        <option value="3">Computer</option>
+      </select>
+      <br>
+      <input type="submit">
+    </form>
+    <br>
+    <hr>
+    <p><b>POST Data Form</b></p>
+    <form method ="POST" action="https://inst377-lab4-server.vercel.app/api/product">
+      <label for="name">Name:</label>
+      <input type="text" name="name">
+      <br>
+      <label for="productName">Product name:</label>
+      <input type="text" name="productName">
+      <br>
+      <label for="productPrice">Price:</label>
+      <input type="text" name="productPrice">
+      <br>
+      <label for="productDescription">Description:</label>
+      <textarea name="productDescription" rows="2" cols="20"></textarea>
+      <br>
+      <input type="submit">
+    </form>
+  </body>
+</hmtl>
